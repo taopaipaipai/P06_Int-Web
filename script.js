@@ -4,7 +4,7 @@ const gallery = document.querySelector(".gallery");
 const getWorks = async () => {
   const response = await fetch("http://localhost:5678/api/works");
   if (response.ok) {
-    const works = response.json();
+    const works = await response.json();
     console.log(response)
     console.log(works)
    
